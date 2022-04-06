@@ -1,0 +1,58 @@
+<!--<h1>Show Pet</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @pet.name %>
+  </li>
+
+  <li>
+    <strong>Age:</strong>
+    <%= @pet.age %>
+  </li>
+
+  <li>
+    <strong>Type:</strong>
+    <%= @pet.type %>
+  </li>
+
+  <li>
+    <strong>Sex:</strong>
+    <%= @pet.sex %>
+  </li>
+
+</ul>-->
+
+<div class="content">
+  <div class="card">
+      <div class="card-content">
+        <div class="card-content">
+          <img src={Routes.static_path(@conn, "/images/pet.png")} alt="Pet Logo" class="card-foto"/>      
+        </div>
+        <div class="card-text">
+          <h3>
+            <%= @pet.name %>
+          </h3>
+          <h4>
+            <%= @pet.type %>
+          </h4>
+          <h5>
+            Sexo: <%= @pet.sex %>
+          </h5>
+          <h5>
+            Edad: <%= @pet.age %>
+          </h5>
+        </div>
+        <div class="links">
+        </div>
+      </div>
+  </div>
+  
+  <section>
+    <span><%= link "Edit", to: Routes.pet_path(@conn, :edit, @pet) %></span> |
+    <span><%= link "Back", to: Routes.pet_path(@conn, :index) %></span>
+  </section>
+</div>
+
+

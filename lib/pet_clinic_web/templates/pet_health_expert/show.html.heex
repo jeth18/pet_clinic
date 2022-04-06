@@ -1,0 +1,70 @@
+<!--<h1>Show Pet health expert</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @pet_health_expert.name %>
+  </li>
+
+  <li>
+    <strong>Age:</strong>
+    <%= @pet_health_expert.age %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @pet_health_expert.email %>
+  </li>
+
+  <li>
+    <strong>Specialities:</strong>
+    <%= @pet_health_expert.specialities %>
+  </li>
+
+  <li>
+    <strong>Sex:</strong>
+    <%= @pet_health_expert.sex %>
+  </li>
+
+</ul>-->
+
+<div class="content">
+  <div class="card">
+      <div class="card-content">
+        <div class="card-content">
+          <img src={Routes.static_path(@conn, "/images/veterinario.png")} alt="Phoenix Framework Logo" class="card-foto"/>      
+        </div>
+        <div class="card-text">
+          <h3>
+            <%= @pet_health_expert.name %>
+          </h3>
+          <h4>
+            Veterinario 
+          </h4>
+          <h5>
+            Sexo: <%= @pet_health_expert.sex %>
+          </h5>
+          <h5>
+            Edad: <%= @pet_health_expert.age %>
+          </h5>
+        </div>
+        <div class="links">
+          <a class="contact">
+            <%= @pet_health_expert.email %>
+          </a>
+        </div>
+      </div>
+      <div class="card-skills">
+        <section>Specialisties</section>
+        <section class="skills">
+          <%= @pet_health_expert.specialities %>
+        </section>
+      </div>
+  </div>
+  
+  <section>
+      <span><%= link "Edit", to: Routes.pet_health_expert_path(@conn, :edit, @pet_health_expert) %></span> |
+      <span><%= link "Back", to: Routes.pet_health_expert_path(@conn, :index) %></span>
+  </section>
+</div>
