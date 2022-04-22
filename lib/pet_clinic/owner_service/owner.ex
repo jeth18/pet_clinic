@@ -7,7 +7,7 @@ defmodule PetClinic.OwnerService.Owner do
     field :email, :string
     field :name, :string
     field :phone_num, :integer
-
+    has_many :pets, PetClinic.PetClinicService.Pet
     timestamps()
   end
 

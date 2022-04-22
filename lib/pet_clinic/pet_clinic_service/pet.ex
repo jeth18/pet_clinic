@@ -7,7 +7,8 @@ defmodule PetClinic.PetClinicService.Pet do
     field :name, :string
     field :sex, :string
     field :type, :string
-
+    belongs_to :owner, PetClinic.OwnerService.Owner
+    belongs_to :pethealthexpert, PetClinic.PetHealthExpertService.PetHealthExpert
     timestamps()
   end
 
