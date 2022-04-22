@@ -17,5 +17,6 @@ defmodule PetClinic.PetClinicService.Pet do
     pet
     |> cast(attrs, [:name, :age, :type, :sex])
     |> validate_required([:name, :age, :type, :sex])
+    |> validate_inclusion(:age, 1..30)
   end
 end
